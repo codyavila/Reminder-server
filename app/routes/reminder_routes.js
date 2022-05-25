@@ -66,7 +66,7 @@ router.post('/reminder', requireToken, (req, res, next) => {
   // set owner of new example to be current user
   req.body.reminder.owner = req.user.id
 
-  Reminder.create(req.body.game)
+  Reminder.create(req.body.reminder)
     // respond to successful `create` with status 201 and JSON of new "example"
     .then((reminder) => {
       res.status(201).json({ reminder: reminder.toObject() })
