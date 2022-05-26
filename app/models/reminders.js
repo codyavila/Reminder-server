@@ -16,6 +16,10 @@ const reminderSchema = new mongoose.Schema(
       type: Date,
       required: true
     },
+    rating: {
+      type: Number,
+      required: true
+    },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
